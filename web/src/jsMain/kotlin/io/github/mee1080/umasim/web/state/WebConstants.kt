@@ -129,44 +129,44 @@ object WebConstants {
         )
 
     val supportSortOrder = listOf(
-        SortOrder("デフォルト", descending = false, noInfo = true) { type.ordinal * 10000000 - rarity * 1000000 + id },
-        SortOrder("ID（ほぼ新しい順）", noInfo = true) { id },
-        SortOrder("名前", descending = false, noInfo = true) { name },
-        SortOrder("キャラ名", descending = false, noInfo = true) { chara },
-        SortOrder("初期絆") { initialRelation },
-        // TODO 特殊固有対応
-        SortOrder("初期ステ合計") { initialStatus(emptyList()).statusTotal },
-        SortOrder("友情ボナ") { friendFactor(noSpecialUniqueCondition) },
-        SortOrder("友情ボナ（特殊固有）") { friendFactor(withSpecialUniqueCondition) },
-        SortOrder("やる気ボナ") { motivationFactor(noSpecialUniqueCondition) },
-        SortOrder("やる気ボナ（特殊固有）") { motivationFactor(withSpecialUniqueCondition) },
-        SortOrder("トレ効果") { trainingFactor(noSpecialUniqueCondition) },
-        SortOrder("トレ効果（特殊固有）") { trainingFactor(withSpecialUniqueCondition) },
-        SortOrder("スピボ") { getBaseBonus(StatusType.SPEED, noSpecialUniqueCondition) },
-        SortOrder("スピボ（特殊固有）") { getBaseBonus(StatusType.SPEED, withSpecialUniqueCondition) },
-        SortOrder("スタボ") { getBaseBonus(StatusType.STAMINA, noSpecialUniqueCondition) },
-        SortOrder("スタボ（特殊固有）") { getBaseBonus(StatusType.STAMINA, withSpecialUniqueCondition) },
-        SortOrder("パワボ") { getBaseBonus(StatusType.POWER, noSpecialUniqueCondition) },
-        SortOrder("パワボ（特殊固有）") { getBaseBonus(StatusType.POWER, withSpecialUniqueCondition) },
-        SortOrder("根性ボ") { getBaseBonus(StatusType.GUTS, noSpecialUniqueCondition) },
-        SortOrder("根性ボ（特殊固有）") { getBaseBonus(StatusType.GUTS, withSpecialUniqueCondition) },
-        SortOrder("賢さボ") { getBaseBonus(StatusType.WISDOM, noSpecialUniqueCondition) },
-        SortOrder("賢さボ（特殊固有）") { getBaseBonus(StatusType.WISDOM, withSpecialUniqueCondition) },
-        SortOrder("スキボ") { getBaseBonus(StatusType.SKILL, noSpecialUniqueCondition) },
-        SortOrder("スキボ（特殊固有）") { getBaseBonus(StatusType.SKILL, withSpecialUniqueCondition) },
-        SortOrder("レスボ") { race },
-        SortOrder("ファンボ") { fan },
-        SortOrder("得意率") { specialtyRate(0, noSpecialUniqueCondition) / 100.0 },
-        SortOrder("得意率（特殊固有）") { specialtyRate(0, withSpecialUniqueCondition) / 100.0 },
-        SortOrder("ヒントLv") { hintLevel },
-        SortOrder("ヒント率") { hintFrequency },
-        SortOrder("賢さ友情回復") { wisdomFriendRecovery(noSpecialUniqueCondition) },
-        SortOrder("賢さ友情回復（特殊固有）") { wisdomFriendRecovery(withSpecialUniqueCondition) },
+        SortOrder("Default", descending = false, noInfo = true) { type.ordinal * 10000000 - rarity * 1000000 + id },
+        SortOrder("ID (mostly newest first)", noInfo = true) { id },
+        SortOrder("Name", descending = false, noInfo = true) { name },
+        SortOrder("Character name", descending = false, noInfo = true) { chara },
+        SortOrder("Initial bond") { initialRelation },
+        // TODO handle special unique
+        SortOrder("Initial status total") { initialStatus(emptyList()).statusTotal },
+        SortOrder("Friend bonus") { friendFactor(noSpecialUniqueCondition) },
+        SortOrder("Friend bonus (special unique)") { friendFactor(withSpecialUniqueCondition) },
+        SortOrder("Motivation bonus") { motivationFactor(noSpecialUniqueCondition) },
+        SortOrder("Motivation bonus (special unique)") { motivationFactor(withSpecialUniqueCondition) },
+        SortOrder("Training effect") { trainingFactor(noSpecialUniqueCondition) },
+        SortOrder("Training effect (special unique)") { trainingFactor(withSpecialUniqueCondition) },
+        SortOrder("Speed bonus") { getBaseBonus(StatusType.SPEED, noSpecialUniqueCondition) },
+        SortOrder("Speed bonus (special unique)") { getBaseBonus(StatusType.SPEED, withSpecialUniqueCondition) },
+        SortOrder("Stamina bonus") { getBaseBonus(StatusType.STAMINA, noSpecialUniqueCondition) },
+        SortOrder("Stamina bonus (special unique)") { getBaseBonus(StatusType.STAMINA, withSpecialUniqueCondition) },
+        SortOrder("Power bonus") { getBaseBonus(StatusType.POWER, noSpecialUniqueCondition) },
+        SortOrder("Power bonus (special unique)") { getBaseBonus(StatusType.POWER, withSpecialUniqueCondition) },
+        SortOrder("Guts bonus") { getBaseBonus(StatusType.GUTS, noSpecialUniqueCondition) },
+        SortOrder("Guts bonus (special unique)") { getBaseBonus(StatusType.GUTS, withSpecialUniqueCondition) },
+        SortOrder("Wisdom bonus") { getBaseBonus(StatusType.WISDOM, noSpecialUniqueCondition) },
+        SortOrder("Wisdom bonus (special unique)") { getBaseBonus(StatusType.WISDOM, withSpecialUniqueCondition) },
+        SortOrder("Skill bonus") { getBaseBonus(StatusType.SKILL, noSpecialUniqueCondition) },
+        SortOrder("Skill bonus (special unique)") { getBaseBonus(StatusType.SKILL, withSpecialUniqueCondition) },
+        SortOrder("Race bonus") { race },
+        SortOrder("Fan bonus") { fan },
+        SortOrder("Specialty rate") { specialtyRate(0, noSpecialUniqueCondition) / 100.0 },
+        SortOrder("Specialty rate (special unique)") { specialtyRate(0, withSpecialUniqueCondition) / 100.0 },
+        SortOrder("Hint Lv") { hintLevel },
+        SortOrder("Hint rate") { hintFrequency },
+        SortOrder("Wisdom friend recovery") { wisdomFriendRecovery(noSpecialUniqueCondition) },
+        SortOrder("Wisdom friend recovery (special unique)") { wisdomFriendRecovery(withSpecialUniqueCondition) },
     )
 
     val trainingTypeList = trainingType.toList()
 
-    val motivationMap = mapOf(3 to "超絶好調", 2 to "絶好調", 1 to "好調", 0 to "普通", -1 to "不調", -2 to "絶不調")
+    val motivationMap = mapOf(3 to "Peak", 2 to "Excellent", 1 to "Good", 0 to "Normal", -1 to "Poor", -2 to "Terrible")
 
     val trainingInfo = Scenario.entries.associateWith { Store.getTrainingInfo(it) }
 
@@ -174,18 +174,18 @@ object WebConstants {
 
     val simulationModeList = mapOf(
         Scenario.URA to listOf(
-            "スピ3パワ3" to { FactorBasedActionSelector2.speedPower.generateSelector() },
-            "スピ3パワ3中距離" to { FactorBasedActionSelector2.speedPowerMiddle.generateSelector() },
-            "スピ3賢3" to { FactorBasedActionSelector2.speedWisdom.generateSelector() },
-            "スピ3スタ3" to { FactorBasedActionSelector2.speedStamina.generateSelector() },
-            "パワ3賢3" to { FactorBasedActionSelector2.aoharuPowerWisdom.generateSelector() },
-            "スピ2パワ3賢1" to { FactorBasedActionSelector2.speed2Power3Wisdom1.generateSelector() },
+            "Speed3 Power3" to { FactorBasedActionSelector2.speedPower.generateSelector() },
+            "Speed3 Power3 Mid-distance" to { FactorBasedActionSelector2.speedPowerMiddle.generateSelector() },
+            "Speed3 Wisdom3" to { FactorBasedActionSelector2.speedWisdom.generateSelector() },
+            "Speed3 Stamina3" to { FactorBasedActionSelector2.speedStamina.generateSelector() },
+            "Power3 Wisdom3" to { FactorBasedActionSelector2.aoharuPowerWisdom.generateSelector() },
+            "Speed2 Power3 Wisdom1" to { FactorBasedActionSelector2.speed2Power3Wisdom1.generateSelector() },
         ),
         Scenario.AOHARU to listOf(
-            "スピ2パワ3賢1" to { FactorBasedActionSelector2.aoharuSpeed2Power3Wisdom1.generateSelector() },
-            "スピ2賢2代理ライス" to { FactorBasedActionSelector2.aoharuSpeed2Power1Wisdom2Friend1Optuna3.generateSelector() },
-            "スピ2スタ1賢3" to { FactorBasedActionSelector2.aoharuSpeed2Stamina1Wisdom3.generateSelector() },
-            "スピ1スタ1賢1代理デジタル" to { FactorBasedActionSelector2.aoharuSpeed2Stamina1Power1Wisdom1Friend1Optuna.generateSelector() },
+            "Speed2 Power3 Wisdom1" to { FactorBasedActionSelector2.aoharuSpeed2Power3Wisdom1.generateSelector() },
+            "Speed2 Wisdom2 with Rice friend" to { FactorBasedActionSelector2.aoharuSpeed2Power1Wisdom2Friend1Optuna3.generateSelector() },
+            "Speed2 Stamina1 Wisdom3" to { FactorBasedActionSelector2.aoharuSpeed2Stamina1Wisdom3.generateSelector() },
+            "Speed1 Stamina1 Wisdom1 with Digital friend" to { FactorBasedActionSelector2.aoharuSpeed2Stamina1Power1Wisdom1Friend1Optuna.generateSelector() },
         ),
         Scenario.CLIMAX to listOf(),
         Scenario.GRAND_LIVE to listOf(),
@@ -195,19 +195,19 @@ object WebConstants {
     val displaySimulationModeList =
         simulationModeList.mapValues { it.value.mapIndexed { index, pair -> index to pair.first } }
 
-    val dummyMegaphoneItem = MegaphoneItem("なし", 0, 0, 0)
+    val dummyMegaphoneItem = MegaphoneItem("None", 0, 0, 0)
 
     val shopItemMegaphone = listOf(dummyMegaphoneItem) + Store.Climax.shopItem.filterIsInstance<MegaphoneItem>()
 
-    val dummyWeightItem = WeightItem("なし", 0, 0, 0, StatusType.NONE)
+    val dummyWeightItem = WeightItem("None", 0, 0, 0, StatusType.NONE)
 
     val shopItemWeight = listOf(dummyWeightItem) + Store.Climax.shopItem.filterIsInstance<WeightItem>()
 
-    val shopItemWeightNames = listOf(-1 to "なし") + shopItemWeight.mapIndexed { index, item -> index to item.name }
+    val shopItemWeightNames = listOf(-1 to "None") + shopItemWeight.mapIndexed { index, item -> index to item.name }
 
     val raceItem = mapOf(
-        "蹄鉄ハンマー・匠" to 1.2,
-        "蹄鉄ハンマー・極" to 1.35,
+        "Horseshoe Hammer - Artisan" to 1.2,
+        "Horseshoe Hammer - Supreme" to 1.35,
     )
 
     val uafFestivalBonusValue = mapOf(
@@ -224,17 +224,17 @@ object WebConstants {
     val cookCookPoint = listOf(0, 500, 1500, 2500, 5000, 7000, 10000, 12000)
 
     val cookPhase = mapOf(
-        -1 to "なし", 0 to "ジュニア料理", 1 to "クラシック料理", 2 to "シニア料理", 3 to "GIプレート",
+        -1 to "None", 0 to "Junior Cuisine", 1 to "Classic Cuisine", 2 to "Senior Cuisine", 3 to "GI Plate",
     )
 
-    val cookResult1 = mapOf(0 to "すべて満足", 1 to "12月大満足", 2 to "6月大満足")
+    val cookResult1 = mapOf(0 to "All satisfied", 1 to "Very satisfied in December", 2 to "Very satisfied in June")
 
-    val cookResult2 = mapOf(0 to "満足", 1 to "大満足", 2 to "超満足")
+    val cookResult2 = mapOf(0 to "Satisfied", 1 to "Very satisfied", 2 to "Extremely satisfied")
 }
 
 fun SupportCard?.displayName(): String {
     return if (this == null) {
-        "未選択"
+        "Not selected"
     } else {
         WebConstants.getRarityText(this) + " " + name
     }

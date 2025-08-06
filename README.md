@@ -1,4 +1,4 @@
-# ウマ娘育成シミュレータ (umasim)
+# Umamusume Training Simulator (umasim)
 
 ## Author
 

@@ -50,11 +50,11 @@ data class MechaState(
 }
 
 enum class MechaPhase(val label: String, val turn: Int) {
-    Junior1("ジュニア前半", 1),
-    Junior2("ジュニア後半", 13),
-    Classic1("クラシック前半", 25),
-    Classic2("クラシック後半", 37),
-    Senior2("シニア前半", 49),
-    Senior1("シニア後半", 61),
-    Finals("ファイナルズ", 73),
+    Junior1("Junior First Half", 1),
+    Junior2("Junior Second Half", 13),
+    Classic1("Classic First Half", 25),
+    Classic2("Classic Second Half", 37),
+    Senior2("Senior First Half", 49),
+    Senior1("Senior Second Half", 61),
+    Finals("Finals", 73),
 }
