@@ -34,7 +34,7 @@ sealed interface RecommendFilter {
 
 object NoFilter : RecommendFilter {
     override fun invoke(entry: Triple<RaceEntry, Int, List<Pair<String, Int?>>>) = true
-    override fun toString() = "全て"
+    override fun toString() = "All"
 }
 
 class TurnJustFilter(val turn: Int) : RecommendFilter {
@@ -44,7 +44,7 @@ class TurnJustFilter(val turn: Int) : RecommendFilter {
 
 class TurnAfterFilter(val turn: Int) : RecommendFilter {
     override fun invoke(entry: Triple<RaceEntry, Int, List<Pair<String, Int?>>>) = entry.first.turn >= turn
-    override fun toString() = turnToString(turn) + " 以降"
+    override fun toString() = turnToString(turn) + " and later"
 }
 
 class AchievementFilter(val name: String) : RecommendFilter {

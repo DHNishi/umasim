@@ -28,12 +28,12 @@ import io.github.mee1080.umasim.web.page.graph.GraphState
 
 // https://fonts.google.com/icons
 enum class Page(val path: String, val displayName: String, val icon: String) {
-    Top("", "トレーニング", "trending_up"),
-    Rotation("rotation", "ローテーション", "event_note"),
-    Lesson("lesson", "レッスン", "queue_music"),
-    Simulation("simulation", "シミュレーション", "person_raised_hand"),
-    Graph("graph", "グラフ", "bar_chart"),
-    LegendsCalc("legends", "心得計算", "star"),
+    Top("", "Training", "trending_up"),
+    Rotation("rotation", "Rotation", "event_note"),
+    Lesson("lesson", "Lesson", "queue_music"),
+    Simulation("simulation", "Simulation", "person_raised_hand"),
+    Graph("graph", "Graph", "bar_chart"),
+    LegendsCalc("legends", "Legend Calc", "star"),
 }
 
 data class State(
@@ -203,7 +203,7 @@ data class SupportSelection(
 
     val statusType get() = card?.type ?: StatusType.NONE
 
-    val name get() = card?.name ?: "未選択"
+    val name get() = card?.name ?: "Not selected"
 
     val isSelected get() = card != null
 
